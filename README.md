@@ -1,7 +1,7 @@
 # api_final
 ### Описание
 
-    В данном проекте реализоавно API на основе Django REST framework. Данный програмный 
+В данном проекте реализоавно API на основе Django REST framework. Данный програмный 
 интерфейс позволяет выполнять взаимодействие с БД проекта Yatube. API позволяет выполнять 
 действия создания, чтения, редактирования и удаления (CRUD) записей в БД для моделей 
 Post, Comments, Follow. Так же интерфейс позволяет выполнять GET запросы для модели Group. 
@@ -69,7 +69,6 @@ python3 manage.py runserver
 
 ```
 /api/v1/jwt/create/
-
 ```
 При этом в теле запросы вы заполняете логин и пароль:
 
@@ -138,12 +137,12 @@ python3 manage.py runserver
 При **GET** запросе к одной записи интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"pub_date": "2019-08-24T14:15:22Z",
-"image": "string",
-"group": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
 }
 ```
 
@@ -151,20 +150,20 @@ python3 manage.py runserver
 записи, *image* и id группы *group*. При этом только параметр *text* является обязательным:
 ```
 {
-"text": "string",
-"image": "string",
-"group": 0
+  "text": "string",
+  "image": "string",
+  "group": 0
 }
 ```
 При этом в интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"pub_date": "2019-08-24T14:15:22Z",
-"image": "string",
-"group": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
 }
 ```
 
@@ -172,20 +171,20 @@ python3 manage.py runserver
 те поля записи которые вы хотите изменить:
 ```
 {
-"text": "string",
-"image": "string",
-"group": 0
+  "text": "string",
+  "image": "string",
+  "group": 0
 }
 ```
 При этом в интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"pub_date": "2019-08-24T14:15:22Z",
-"image": "string",
-"group": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "pub_date": "2019-08-24T14:15:22Z",
+  "image": "string",
+  "group": 0
 }
 ```
 
@@ -208,40 +207,40 @@ python3 manage.py runserver
 При **GET** запросе  для получения списка коментариев интерфейс выдает следующий ответ:
 ```
 [
-{
-"id": 0,
-"author": "string",
-"text": "string",
-"created": "2019-08-24T14:15:22Z",
-"post": 0
-}
+  {
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "created": "2019-08-24T14:15:22Z",
+    "post": 0
+  }
 ]
 ```
 При **GET** запросе к определенному коментарию интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"created": "2019-08-24T14:15:22Z",
-"post": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
 }
 ```
 
 При **POST** запросе на создание коментария в теле запроса указывается параметр *text*:
 ```
 {
-"text": "string"
+  "text": "string"
 }
 ```
 При этом в интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"created": "2019-08-24T14:15:22Z",
-"post": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
 }
 ```
 
@@ -249,17 +248,17 @@ python3 manage.py runserver
 новое значение параметра *text*:
 ```
 {
-"text": "string"
+  "text": "string"
 }
 ```
 При этом в интерфейс выдает следующий ответ:
 ```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"created": "2019-08-24T14:15:22Z",
-"post": 0
+  "id": 0,
+  "author": "string",
+  "text": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "post": 0
 }
 ```
 
@@ -319,7 +318,7 @@ python3 manage.py runserver
 на которого хочет подписатся текущий пользователь. 
 ```
 {
-"following": "string"
+  "following": "string"
 }
 ```
 В результате в ответе получаем:

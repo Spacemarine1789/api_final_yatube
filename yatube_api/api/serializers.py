@@ -16,15 +16,6 @@ class Base64ImageField(serializers.ImageField):
         return super().to_internal_value(data)
 
 
-class UserSerializer(serializers.ModelSerializer):
-    posts = serializers.StringRelatedField(many=True, read_only=True)
-
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'posts')
-        ref_name = 'ReadOnlyUsers'
-
-
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         fields = '__all__'
